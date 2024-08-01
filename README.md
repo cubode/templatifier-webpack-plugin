@@ -1,1 +1,0 @@
-# templatifier-webpack-plugin

@@ -1,0 +1,20 @@
+{
+  "name": "templatifier-webpack-plugin",
+  "version": "1.0.4",
+  "description": "A Webpack plugin for transforming HTML templates with custom tags.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["webpack", "plugin", "html", "templating", "django", "javascript"],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cubode/templatifier-webpack-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cubode/templatifier-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/cubode/templatifier-webpack-plugin#readme"
+}
