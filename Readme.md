@@ -140,4 +140,4 @@ For any issues or questions, please open an issue on the GitHub repository.
 ## About
 We are www.cubode.com an startup focussed on No Code, AI and OpenSouce.
 
-Templatifier has been developed with 💙 for the community
+Templatifier-webpack-plugin has been developed with 💙 for the community, check Templatifier (https://www.npmjs.com/package/templatifier & https://github.com/cubode/templatifier) 
