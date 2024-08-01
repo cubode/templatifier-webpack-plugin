@@ -5,7 +5,7 @@ class TemplatifierWebpackPlugin {
     constructor(options = {}) {
         this.inputFile = options.inputFile || 'src/template.html';
         this.outputDirectory = options.outputDirectory || 'templatifier';
-        this.writeOriginal = options.writeOriginal || false;
+        this.overwriteOriginal = options.overwrite || false;
     }
 
     apply(compiler) {
@@ -46,7 +46,7 @@ class TemplatifierWebpackPlugin {
             // Prepend the pre-html content (like `{% load static %}`) to the final HTML
             const outputHtml = preHtmlContent + html;
             
-            if (this.writeOriginal === true || this.writeOriginal === 'true') {
+            if (this.overwriteOriginal === true || this.overwriteOriginal === 'true') {
                 // Write the transformed HTML back to the original file
                 fs.writeFileSync(absoluteInputPath, outputHtml, 'utf8');
             }
