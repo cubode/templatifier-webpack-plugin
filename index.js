@@ -31,8 +31,32 @@ class TemplatifierWebpackPlugin {
                 return ''; // Remove the comment from HTML
             });
 
+            // Process the <cb-templatifier> elements by replacing them manually using comments
+            html = html.replace(/<!--\s*<cb-templatifier type="loadstatic"\/>\s*-->/g, () => {
+                preHtmlContent += '{% load static %}\n';
+                return ''; // Remove the comment from HTML
+            });
+
+            html = html.replace(/<!--\s*<cb-templatifier type="loadstatic" name="([^"]*)" \/>\s*-->/g, (match, name) => {
+                if (name) {
+                    preHtmlContent += `{% load ${name} %}\n`;
+                } else {
+                    preHtmlContent += '{% load static %}\n';
+                }
+                return ''; // Remove the comment from HTML
+            });
+
             html = html.replace(/<!--\s*<cb-templatifier type="static-css" route="([^"]+)" \/>\s*-->/g, (match, route) => {
                 return `<link href="{% static '${route}' %}" rel="stylesheet">`;
+            });
+
+            // Process the <cb-templatifier> elements for static-css
+            html = html.replace(/<!--\s*<cb-templatifier type="static-css" route="([^"]+)" name="([^"]*)" \/>\s*-->/g, (match, route, name) => {
+                if (name) {
+                    return `<link href="{% ${name} '${route}' %}" rel="stylesheet">`;
+                } else {
+                    return `<link href="{% static '${route}' %}" rel="stylesheet">`;
+                }
             });
 
             html = html.replace(/<!--\s*<cb-templatifier type="static-script" route="([^"]+)" \/>\s*-->/g, (match, route) => {
