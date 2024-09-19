@@ -1,4 +1,16 @@
-# templatifier-webpack-plugin
+# Templatifier-Webpack-Plugin
+## 📊📈📉 Templatifier Webpack Plugin
+
+![License](https://img.shields.io/badge/license-MIT-green)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/company/cubode/)
+[![Watch on GitHub](https://img.shields.io/github/watchers/cubode/templatifier-webpack-plugin.svg?style=social)](https://github.com/cubode/templatifier-webpack-plugin/watchers)
+[![Star on GitHub](https://img.shields.io/github/stars/cubode/templatifier-webpack-plugin.svg?style=social)](https://github.com/cubode/templatifier-webpack-plugin/stargazers)
+[![Tweet](https://img.shields.io/twitter/url/https/github.com/cubode/templatifier-webpack-plugin.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20templatifier-webpack-plugin%20%21%20https%3A%2F%2Fgithub.com%2Fcubode%2Ftemplatifier-webpack-plugin)
+
+Webpack Plugin to Transform Normal HTML Files into Django HTML Templates
+
+`templatifier-webpack-plugin` allows you to seamlessly integrate the transformation of normal HTML files into Django HTML templates as part of the Webpack build process. This helps maintain a streamlined workflow between frontend development and Django template integration.
+
 
 **TemplatifierWebpackPlugin** is a custom Webpack plugin designed to transform your **HTML templates** by replacing specific comment markers with **Django** template tags. This plugin is particularly useful if you're working with Django templates and static files, allowing you to automate the injection of {% load static %}, {% csrf_token %}, and static file routes into your HTML files.
 
